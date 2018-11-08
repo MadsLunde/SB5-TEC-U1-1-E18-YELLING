@@ -1,6 +1,6 @@
 <?php
 require_once('./util/SqlCommands.php');
-require_once('./util/yell.php');
+require_once('./model/yell.php');
 
 function getAllYells(){
     //sql fetch all yells
