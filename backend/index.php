@@ -1,9 +1,20 @@
 <?php
+/**
+ * NOTE!!!!
+ * 
+ * Change this variable to the location of this index.php file within the htdocs/www folder
+ * 
+ * Example: 
+ * If this index.php folder is placed in the following directory path: 
+ *        "htdocs/sb5-tec/backend/index.php"
+ * $indexPath = "/sb5-tec/backend/index.php";
+ */
+$indexPath = "/sb5-tec/backend/index.php";
 
 /**
  * Global index file
  */
-$uri = str_replace("/sb5-tec/backend/index.php","",$_SERVER['REQUEST_URI']);
+$uri = str_replace($indexPath,"",$_SERVER['REQUEST_URI']);
 $method = $_SERVER['REQUEST_METHOD'];
 
 header("Access-Control-Allow-Origin: *");

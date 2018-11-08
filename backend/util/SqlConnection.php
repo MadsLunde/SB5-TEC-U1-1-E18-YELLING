@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Edit these configurations if needed
+ */
 class SqlConnection{
     private $DB_SERVER = "localhost";
     private $DB_USER = "root";
