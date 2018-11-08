@@ -1,0 +1,11 @@
+<div class="homepage__container">
+  <div *ngFor="let yell of yells" class="homepage__message">
+    <label *ngIf="yell.id == 1">i AM first</label>
+    <label>{{yell.content}} at {{yell.timestamp}}</label>
+  </div>
+
+  <div>
+    <input [(ngModel)]="newYellContent">
+    <button (click)="newYell()">YELL</button>
+  </div>
+</div>

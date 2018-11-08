@@ -6,12 +6,13 @@
 $uri = str_replace("/sb5-tec/backend/index.php","",$_SERVER['REQUEST_URI']);
 $method = $_SERVER['REQUEST_METHOD'];
 
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Origin, Content-Type, Accept");
+header('Content-Type: application/json');
+
 if($method == "OPTIONS"){
     exit;
 }
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, authorization");
-header('Content-Type: application/json');
 
 switch($uri){
     case "/": // main page
